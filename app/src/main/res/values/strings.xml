@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DayJourney</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new_thoughts">Add New Thoughts</string>
+    <string name="save">Save</string>
+    <string name="write_about_your_day">Write about your day:</string>
+</resources>
