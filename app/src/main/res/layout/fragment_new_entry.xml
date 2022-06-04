@@ -27,7 +27,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="560dp"
         android:padding="24dp"
         app:cardBackgroundColor="@color/cream"
         app:cardCornerRadius="14dp"
@@ -36,14 +36,38 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="460dp"
+            android:layout_height="match_parent"
             android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView3"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/cream_light"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:contentPadding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldTItle">
+
+                <EditText
+                    android:id="@+id/edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/como_semibold"
+                    android:hint="Title"
+                    android:inputType="textAutoCorrect|textCapSentences|textAutoComplete"
+                    android:textColor="@color/violet"
+                    android:textSize="16sp" />
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/textFieldTItle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/como_semibold"
+                android:fontFamily="@font/como_bold"
                 android:text="@string/write_about_your_day"
                 android:textAlignment="viewStart"
                 android:textColor="@color/violet"
@@ -55,17 +79,17 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 app:cardBackgroundColor="@color/cream_light"
                 app:cardCornerRadius="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textFieldTItle">
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="16dp">
+                    android:padding="14dp">
 
                     <EditText
                         android:id="@+id/textField"
@@ -89,14 +113,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="416dp"
-        android:layout_height="189dp"
-        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,5 +10,7 @@ data class DiaryEntry(
 
     @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "text")val text: String,
-    @ColumnInfo(name = "date") val date: String
+    @ColumnInfo(name = "date") val date: String,
+    @ColumnInfo(name = "title") val title: String,
+    @ColumnInfo(name= "mood") val mood: Int
 )

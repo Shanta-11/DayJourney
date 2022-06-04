@@ -40,9 +40,10 @@ class NewEntryFragment : Fragment() {
 
     private fun insertDataToDatabase() {
         val entry = view?.findViewById<EditText>(R.id.textField)?.text.toString()
+        val title = view?.findViewById<EditText>(R.id.edit_title)?.text.toString()
         val date = getDate()
         if(inputCheck(entry)){
-            val diaryEntry = DiaryEntry(0, entry, date)
+            val diaryEntry = DiaryEntry(0, entry, date, title, 1)
             mDiaryEntryViewModel.addEntry(diaryEntry)
             Toast.makeText(requireContext(), "Saved!", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_newEntryFragment_to_entryListFragment)
@@ -55,13 +56,14 @@ class NewEntryFragment : Fragment() {
     private fun getDate(): String {
 
         val day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH).toString()
-        val month = Calendar.getInstance().get(Calendar.MONTH)+1
+        val month = (Calendar.getInstance().get(Calendar.MONTH)+1).toString()
         val year = Calendar.getInstance().get(Calendar.YEAR).toString()
-        return day + "/" + (month.toString()) + "/" + year
+        return day + "/" + month + "/" + year
     }
 
     private fun inputCheck(entry: String): Boolean{
         return !(TextUtils.isEmpty(entry))
+
     }
 
 

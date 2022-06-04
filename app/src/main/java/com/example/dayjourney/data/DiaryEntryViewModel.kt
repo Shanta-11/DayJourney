@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class DiaryEntryViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllEntries: LiveData<List<DiaryEntry>>
+    val readAllEntries: LiveData<List<DiaryEntry>>
     private val repository: DiaryEntryRepository
 
     init {
