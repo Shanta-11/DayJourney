@@ -62,7 +62,7 @@ class ListAdapter() :
             val action = EntryListFragmentDirections.actionEntryListFragmentToViewEntry2(item)
             holder.itemView.findNavController().navigate(action)
         }
-        holder.itemView.findViewById<TextView>(R.id.entry_view).setMovementMethod(ScrollingMovementMethod())
+        //holder.itemView.findViewById<TextView>(R.id.entry_view).setMovementMethod(ScrollingMovementMethod())
     }
 
     fun setData(entry: List<DiaryEntry>){

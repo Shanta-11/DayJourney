@@ -27,12 +27,14 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="520dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:padding="24dp"
         app:cardBackgroundColor="@color/cream"
         app:cardCornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -81,10 +83,12 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="72dp"
                 app:cardBackgroundColor="@color/cream_light"
                 app:cardCornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
@@ -97,17 +101,16 @@
                     <EditText
                         android:id="@+id/UpdatetextField"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:autofillHints=""
-                        android:ems="10"
                         android:fontFamily="@font/como_medium"
                         android:gravity="start|top"
                         android:imeOptions="actionDone"
                         android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
-                        android:lines="16"
                         android:textAlignment="textStart"
                         android:textColor="@color/violet_variant"
                         android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -124,13 +127,13 @@
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/como_heavy"
         android:text="@string/don_t_worry_we_all_forget_something"
         android:textColor="@color/cream_light"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_img1" />
 
     <ImageView
         android:id="@+id/delete_Entry"
