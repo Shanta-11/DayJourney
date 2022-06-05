@@ -9,6 +9,18 @@ class DiaryEntryRepository(private val diaryEntryDao: DiaryEntryDao) {
         diaryEntryDao.addDiaryEntry(diaryEntry)
     }
 
+    suspend fun updateEntry(diaryEntry: DiaryEntry){
+        diaryEntryDao.updateEntry(diaryEntry)
+    }
+
+    suspend fun deleteEntry(diaryEntry: DiaryEntry){
+        diaryEntryDao.deleteEntry(diaryEntry)
+    }
+
+    suspend fun deleteAllENtries(){
+        diaryEntryDao.deleteAllEntries()
+    }
+
 
 }
 

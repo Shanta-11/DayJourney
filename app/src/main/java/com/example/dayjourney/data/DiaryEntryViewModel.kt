@@ -25,4 +25,23 @@ class DiaryEntryViewModel(application: Application): AndroidViewModel(applicatio
             repository.addEntry(diaryEntry)
         }
     }
+
+    fun updateEntry(diaryEntry: DiaryEntry){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateEntry(diaryEntry)
+        }
+    }
+
+    fun deleteEntry(diaryEntry: DiaryEntry){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteEntry(diaryEntry)
+        }
+    }
+
+    fun deleteAllUsers(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllENtries()
+        }
+    }
+
 }

@@ -2,9 +2,11 @@
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
 
     }
+
 
 android {
     compileSdk 32
@@ -43,8 +45,10 @@ android {
         }
         dependencies {
             classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2")
+            classpath("android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0")
         }
     }
+
 }
 
 dependencies {
@@ -76,4 +80,6 @@ dependencies {
 
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+
+
 }

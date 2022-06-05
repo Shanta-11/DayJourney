@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="violet">#FF585A79</color>
-    <color name="violet_variant">#FF4C4D67</color>
+    <color name="violet_variant">#FF42435F</color>
     <color name="cream_light">#FFFFF1EA</color>
     <color name="cream">#FFFFE4D3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cream_dark">#FFFFC099</color>
 </resources>

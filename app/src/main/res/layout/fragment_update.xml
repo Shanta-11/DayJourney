@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/violet"
-    tools:context=".add.NewEntryFragment">
+    tools:context=".update.UpdateFragment">
 
 
     <com.google.android.material.button.MaterialButton
@@ -15,7 +15,7 @@
         android:fontFamily="@font/como_bold"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:text="@string/save"
+        android:text="@string/update"
         android:textColor="@color/cream"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/como_bold"
-                android:text="@string/write_about_your_day"
+                android:text="@string/update_about_your_day"
                 android:textAlignment="viewStart"
                 android:textColor="@color/violet"
                 android:textSize="24sp"
@@ -119,33 +119,33 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
-        app:layout_constraintDimensionRatio="w, 1:4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/como_heavy"
-        android:text="@string/so_how_do_you_feel_today"
+        android:text="@string/don_t_worry_we_all_forget_something"
         android:textColor="@color/cream_light"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/back_img"
+        android:id="@+id/delete_Entry"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/delete"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_img1"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:layout_marginStart="24dp"

@@ -13,6 +13,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dayjourney.R
 import com.example.dayjourney.data.DiaryEntry
@@ -40,7 +42,7 @@ class ListAdapter() :
 
         val item = userList[position]
         // Needed to call startActivity
-        val context = holder.view.context
+
 
         // Set the text of the WordViewHolder
         holder.itemView.findViewById<TextView>(R.id.title_view).text = item.title
@@ -53,6 +55,11 @@ class ListAdapter() :
             4 -> holder.itemView.findViewById<ImageView>(R.id.mood_view).setImageResource(R.drawable.ic_mood_4)
             5 -> holder.itemView.findViewById<ImageView>(R.id.mood_view).setImageResource(R.drawable.ic_mood_5)
             6 -> holder.itemView.findViewById<ImageView>(R.id.mood_view).setImageResource(R.drawable.ic_mood_6)
+        }
+
+        holder.itemView.findViewById<ConstraintLayout>(R.id.entryItem).setOnClickListener{
+            val action = EntryListFragmentDirections.actionEntryListFragmentToUpdateFragment(item)
+            holder.itemView.findNavController().navigate(action)
         }
     }
 
