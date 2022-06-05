@@ -10,7 +10,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCard"
         android:layout_width="match_parent"
-        android:layout_height="196dp"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/cream"
         app:cardCornerRadius="14dp"
         app:cardElevation="2dp"
@@ -24,12 +24,13 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView2"
                 android:layout_width="match_parent"
-                android:layout_height="152dp"
+                android:layout_height="wrap_content"
                 app:cardBackgroundColor="@color/cream_light"
                 app:cardCornerRadius="14dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_view">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -38,7 +39,9 @@
                     <ImageView
                         android:id="@+id/mood_view"
                         android:layout_width="136dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="W,1:1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_mood_1" />
@@ -46,19 +49,18 @@
                     <TextView
                         android:id="@+id/entry_view"
                         android:layout_width="0dp"
-                        android:layout_height="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:fontFamily="@font/como_medium"
-                        android:lines="10"
-                        android:text="TextView"
+                        android:maxLines="20"
                         android:textAlignment="textStart"
                         android:textColor="@color/violet"
-                        android:textSize="13.5sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="14sp"
+                        android:scrollbars="vertical"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/mood_view"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:text="If set, the text view will include its current complete text inside of its frozen icicle in addition to meta-data such as the current cursor position. If set to false, keeps the movement method from being set to the link movement method even if autoLink causes links to be found. " />
+                        tools:text="If set, the text view will include its current complete text inside of its frozen icicle in addition to meta-data such as the current cursor position. If set to false, keeps the movement method from being set to the link movement method even if autoLink causes links to be found. If set, the text view will include its current complete text inside of its frozen icicle in addition to meta-data such as the current cursor position. If set to false, keeps the movement method from being set to the link movement method even if autoLink causes links to be found. " />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -71,19 +73,21 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/como_bold"
+                android:maxLines="3"
                 android:textColor="@color/violet"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toTopOf="@+id/materialCardView2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Dummy Title" />
+                app:layout_constraintWidth_max="256dp"
+                tools:text="Dummy Title test to check how much width should i keep" />
 
             <TextView
                 android:id="@+id/date_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/como_semibold"
                 android:textColor="@color/violet"

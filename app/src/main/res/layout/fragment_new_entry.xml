@@ -9,7 +9,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/UpdateEntry"
+        android:id="@+id/Edit_Entry"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:fontFamily="@font/como_bold"
@@ -17,7 +17,7 @@
         android:insetBottom="0dp"
         android:text="@string/save"
         android:textColor="@color/cream"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:backgroundTint="@color/violet"
         app:cornerRadius="12dp"

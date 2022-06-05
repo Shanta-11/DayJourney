@@ -11,7 +11,6 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.dayjourney.R
@@ -38,7 +37,7 @@ class UpdateFragment : Fragment() {
         view.findViewById<EditText>(R.id.UpdatetextField).setText(args.currentEntry.text)
 
         view.findViewById<ImageView>(R.id.back_img1).setOnClickListener{
-            findNavController().navigate(R.id.action_updateFragment_to_entryListFragment)
+            findNavController().navigate(UpdateFragmentDirections.actionUpdateFragmentToViewEntry(args.currentEntry))
         }
 
 
@@ -62,7 +61,7 @@ class UpdateFragment : Fragment() {
         }
 
 
-        view.findViewById<MaterialButton>(R.id.UpdateEntry).setOnClickListener{
+        view.findViewById<MaterialButton>(R.id.Edit_Entry).setOnClickListener{
             updateDataToDatabase()
         }
         return view

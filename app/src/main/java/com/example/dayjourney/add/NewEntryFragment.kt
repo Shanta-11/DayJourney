@@ -1,6 +1,5 @@
 package com.example.dayjourney.add
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -46,7 +45,7 @@ class NewEntryFragment : Fragment() {
 
 
 
-        view.findViewById<MaterialButton>(R.id.UpdateEntry).setOnClickListener{
+        view.findViewById<MaterialButton>(R.id.Edit_Entry).setOnClickListener{
             insertDataToDatabase()
         }
 

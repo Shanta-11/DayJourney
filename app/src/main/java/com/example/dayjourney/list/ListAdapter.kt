@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.provider.ContactsContract
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,9 +59,10 @@ class ListAdapter() :
         }
 
         holder.itemView.findViewById<ConstraintLayout>(R.id.entryItem).setOnClickListener{
-            val action = EntryListFragmentDirections.actionEntryListFragmentToUpdateFragment(item)
+            val action = EntryListFragmentDirections.actionEntryListFragmentToViewEntry2(item)
             holder.itemView.findNavController().navigate(action)
         }
+        holder.itemView.findViewById<TextView>(R.id.entry_view).setMovementMethod(ScrollingMovementMethod())
     }
 
     fun setData(entry: List<DiaryEntry>){

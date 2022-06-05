@@ -12,14 +12,10 @@
         tools:layout="@layout/fragment_entry_list" >
         <action
             android:id="@+id/action_entryListFragment_to_newEntryFragment"
-            app:destination="@id/newEntryFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim"
-            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+            app:destination="@id/newEntryFragment" />
         <action
-            android:id="@+id/action_entryListFragment_to_updateFragment"
-            app:destination="@id/updateFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim"
-            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_entryListFragment_to_viewEntry2"
+            app:destination="@id/viewEntry" />
     </fragment>
     <fragment
         android:id="@+id/newEntryFragment"
@@ -28,22 +24,36 @@
         tools:layout="@layout/fragment_new_entry" >
         <action
             android:id="@+id/action_newEntryFragment_to_entryListFragment"
-            app:destination="@id/entryListFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim"
-            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+            app:destination="@id/entryListFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.example.dayjourney.update.UpdateFragment"
         android:label="fragment_update"
         tools:layout="@layout/fragment_update" >
-        <action
-            android:id="@+id/action_updateFragment_to_entryListFragment"
-            app:destination="@id/entryListFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim"
-            app:exitAnim="@anim/nav_default_pop_exit_anim" />
         <argument
             android:name="currentEntry"
             app:argType="com.example.dayjourney.data.DiaryEntry" />
+        <action
+            android:id="@+id/action_updateFragment_to_entryListFragment"
+            app:destination="@id/entryListFragment" />
+        <action
+            android:id="@+id/action_updateFragment_to_viewEntry"
+            app:destination="@id/viewEntry" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewEntry"
+        android:name="com.example.dayjourney.View.ViewEntry"
+        android:label="fragment_view_entry"
+        tools:layout="@layout/fragment_view_entry" >
+        <argument
+            android:name="currentEntry"
+            app:argType="com.example.dayjourney.data.DiaryEntry" />
+        <action
+            android:id="@+id/action_viewEntry_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_viewEntry_to_entryListFragment"
+            app:destination="@id/entryListFragment" />
     </fragment>
 </navigation>

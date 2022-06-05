@@ -10,12 +10,13 @@
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/drawable/ic_mood_2.xml" value="0.1" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/drawable/ic_mood_4.xml" value="0.109" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/activity_main.xml" value="0.17753623188405798" />
-        <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/entry_item.xml" value="0.264" />
+        <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/entry_item.xml" value="0.4" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/fragment_about_me.xml" value="0.27447916666666666" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/fragment_entry_list.xml" value="0.2" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/fragment_new_entry.xml" value="0.176" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/fragment_update.xml" value="0.176" />
-        <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/mood_recycler.xml" value="0.4" />
+        <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/fragment_view_entry.xml" value="0.2230769230769231" />
+        <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/layout/mood_recycler.xml" value="0.2" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.112" />
         <entry key="..\:/IITG/fun_stuff/App-Dev/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.112" />
       </map>

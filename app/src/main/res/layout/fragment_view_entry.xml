@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/violet"
-    tools:context=".update.UpdateFragment">
-
+    tools:context=".View.ViewEntry">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/Edit_Entry"
@@ -15,10 +14,12 @@
         android:fontFamily="@font/como_bold"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:text="@string/update"
+        android:text="Edit"
         android:textColor="@color/cream"
+
         android:textSize="24sp"
         android:textStyle="bold"
+
         app:backgroundTint="@color/violet"
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,16 +28,17 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="520dp"
+        android:layout_height="wrap_content"
         android:padding="24dp"
         app:cardBackgroundColor="@color/cream"
         app:cardCornerRadius="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/Edit_Entry"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:minHeight="520dp"
             android:padding="20dp">
 
             <com.google.android.material.card.MaterialCardView
@@ -53,17 +55,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textFieldTItleupdate">
 
-                <EditText
-                    android:id="@+id/Update_title"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:autofillHints=""
-                    android:fontFamily="@font/como_semibold"
-                    android:hint="@string/title"
-                    android:inputType="textAutoCorrect|textCapSentences|textAutoComplete"
-                    android:textColor="@color/violet"
-                    android:textSize="16sp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/como_semibold"
+                        android:text="TextView"
+                        android:textColor="@color/violet"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="A Wasteful Day" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
@@ -71,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/como_bold"
-                android:text="@string/update_about_your_day"
+                android:text="And this is how your day went..."
                 android:textAlignment="viewStart"
                 android:textColor="@color/violet"
                 android:textSize="24sp"
@@ -81,11 +90,14 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="72dp"
                 app:cardBackgroundColor="@color/cream_light"
                 app:cardCornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
 
@@ -94,24 +106,16 @@
                     android:layout_height="match_parent"
                     android:padding="14dp">
 
-                    <EditText
-                        android:id="@+id/UpdatetextField"
-                        android:layout_width="0dp"
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:fontFamily="@font/como_medium"
-                        android:gravity="start|top"
-                        android:imeOptions="actionDone"
-                        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
-                        android:lines="16"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/violet_variant"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        android:scrollbars="vertical"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:text="hello lorem ipsum dolor" />
+                        tools:text="s email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error please notify the system manager. This message contains confidential information and is intended only for the individual named. If you are not the named addressee you should not disseminate, distribute or copy this e-mail. Please notify the sender immediately by e-mail if you have received this e-mail by mistake and delete this e-mail from your system. If you are not the intended recipient you are notified that disclosing, copying, distributing, or taking any action in reliance on the contents of this information is strictly prohibited. The s email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error please notify the system manager. This message contains confidential information and is intended only for the individual named. If you are not the named addressee you should not disseminate, distribute or copy this e-mail. Please notify the sender immediately by e-mail if you have received this e-mail by mistake and delete this e-mail from your system. If you are not the intended recipient you are notified that disclosing, copying, distributing, or taking any action in reliance on the contents of this information is strictly prohibited. The" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -119,33 +123,22 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView2"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/como_heavy"
-        android:text="@string/don_t_worry_we_all_forget_something"
+        android:text="I recall, Your mood was..."
         android:textColor="@color/cream_light"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/delete_Entry"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:contentDescription="@string/delete"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_baseline_delete_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/back_img1"
+        android:id="@+id/back_img"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:layout_marginStart="24dp"
@@ -156,5 +149,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_mood_1"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
